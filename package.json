@@ -1,0 +1,21 @@
+{
+  "name": "localwebsite",
+  "version": "1.0.0",
+  "description": "Local Website Test",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumber-js features/**/*.feature --require framework/step_definitions"
+  },
+  "author": "Bence Banyasz",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "chromedriver": "^87.0.5",
+    "geckodriver": "^1.21.1",
+    "node": "^15.4.0",
+    "selenium-webdriver": "^4.0.0-alpha.8"
+  },
+  "devDependencies": {
+    "@cucumber/cucumber": "^7.0.0"
+  }
+}
