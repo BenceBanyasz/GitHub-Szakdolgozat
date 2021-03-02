@@ -29,17 +29,17 @@ Feature: Local Website Test
 
     Scenario: 3. Checking the price in the Cart
       Given the Local Website is open
-      When I click the Add To Cart button at every item in the All cetagory
+      When the Add To Cart button is clicked at every item in the All category
       Then the Total Amount should be 150
 
     Scenario: 4. Checking the quantity in the Cart
       Given the Local Website is open
-      When I click the Add To Cart button at every item in the All cetagory
+      When the Add To Cart button is clicked at every item in the All category
       Then the number of Total Items should be 5
 
     Scenario: 5. Checking the Submit Order method
       Given the Local Website is open
-      When I click the Add To Cart button at every item in the All cetagory
+      When the Add To Cart button is clicked at every item in the All category
       Then the Total Amount should be 150
       And the number of Total Items should be 5
       When the "Submit Order" button is clicked
