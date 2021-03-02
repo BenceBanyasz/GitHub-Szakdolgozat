@@ -6,18 +6,17 @@ class Main {
         this.driver = driver;
     }
     
+    
     get allButton(){
         return this.driver.findElement(By.xpath(elements.allButton))
     }
 
     get itemsClass(){
-        let myList = this.driver.findElements(By.xpath(elements.itemsClass))    //undefined
-        return myList
+        return this.driver.findElements(By.xpath(elements.itemsClass))
     }
 
     get itemsInCategory(){
-        let perCategoryList = this.driver.findElements(By.xpath(elements.itemsInCategory))
-        return perCategoryList
+        return this.driver.findElements(By.xpath(elements.itemsInCategory))
     }
 
     get actualButton(){
@@ -69,8 +68,7 @@ class Main {
 
     async allItemsVisible(){
         let myList = await this.itemsClass
-        let counter = myList.length
-        return counter
+        return myList.length
     }
 
     async itemsDescription(){
@@ -78,8 +76,8 @@ class Main {
         let i
         let textArray = new Array
         for(i = 1; i < myList.length + 1; i++){     //The list's indexing starts from 1 (MyList)
-        let text = await this.driver.findElement(By.xpath('(//div[@class = "card-text bg-white p-1"])[' + i + ']')).getText();
-        textArray.push(text)
+            let text = await this.driver.findElement(By.xpath('(//div[@class = "card-text bg-white p-1"])[' + i + ']')).getText();
+            textArray.push(text)
         }
         return textArray
     }
@@ -100,21 +98,18 @@ class Main {
     }
 
     async backButtonVisibility(){
-        let visibility = await this.backButton.isDisplayed()
-        return visibility
+        return await this.backButton.isDisplayed()
     }
 
     async thanksMessageVisibility(){
         let visibility = await this.thanksMessage.isDisplayed()
         let message = await this.thanksMessage.getText()
         let array = new Array(visibility,message)
-        return array
-        
+        return array   
     }
 
     async allButtonVisibility(){
-        let visibility = await this.allButton.isDisplayed()
-        return visibility
+        return await this.allButton.isDisplayed()
     }
 }
 
