@@ -6,7 +6,7 @@ Feature: Local Website Test
     Scenario: 1. Checking the categories
       Given the Local Website is open
       When the all button is clicked
-      Then every item should be visible '5' items
+      Then every item should be visible, '5' items
       When the "Watersports" button is clicked
       Then the items in the current category should contain 'Watersports' text
       When the "Running" button is clicked
